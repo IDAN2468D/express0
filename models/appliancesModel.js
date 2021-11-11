@@ -6,7 +6,8 @@ const appliancesSchema = new mongoose.Schema({
     model: String,
     image: String,
     price: Number,
-    description: String
+    description: String,
+    isFavourite: Boolean
 })
 
 const AppliancesModel = mongoose.model("appliances", appliancesSchema);

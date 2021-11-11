@@ -3,10 +3,15 @@ const Joi = require("joi");
 
 const shopSchema = new mongoose.Schema({
     id: Number,
-    cat: String,
     name: String,
     price: Number,
-    image: String
+    image: String,
+    description: String,
+    isFavourite: Boolean,
+    NutritionName: String,
+    DiscountPercentages: Number,
+    Percentages: Number,
+    Nutrition: Array,
 })
 
 const ShopModel = mongoose.model("shops", shopSchema);

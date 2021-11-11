@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 const Joi = require("joi");
 
 const foodSchema = new mongoose.Schema({
+    id: Number,
     name: String,
-    img: String,
-    cal: Number,
-    price: Number
+    image: String,
+    price: Number,
+    isFavourite: Boolean
 })
 
 const FoodModel = mongoose.model("foods", foodSchema);

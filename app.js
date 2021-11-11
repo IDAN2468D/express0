@@ -17,6 +17,10 @@ routesInit(app)
 
 const server = http.createServer(app)
 
-const port = "3001";
+const port = process.env.PORT || 3001;
 server.listen(port);
+
+app.listen(port, "192.168.1.102", function () {
+    console.log("Running RestHab on port" + port)
+})
 
