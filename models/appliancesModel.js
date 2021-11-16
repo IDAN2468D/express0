@@ -7,7 +7,11 @@ const appliancesSchema = new mongoose.Schema({
     image: String,
     price: Number,
     description: String,
-    isFavourite: Boolean
+    isFavourite: Boolean,
+    DiscountPercentages: Number,
+    Percentages: Number,
+    CatalogNumber: Number,
+    imageDetails: Array
 })
 
 const AppliancesModel = mongoose.model("appliances", appliancesSchema);
