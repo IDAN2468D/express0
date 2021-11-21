@@ -2,10 +2,6 @@ const express = require("express");
 const path = require("path");
 const http = require("http");
 
-app.get("/", async (req, res) => {
-    let data = await ShopModel.find({});
-    res.json(data);
-})
 
 const dbConnect = require("./db/mongoConnect");
 const { routesInit } = require("./routes/config_route");
