@@ -13,10 +13,6 @@ router.get("/", async (req, res) => {
     res.json(data);
 })
 
-router.get("/shop", async (req, res) => {
-    let data = await ShopModel.find({});
-    res.json(data);
-})
 
 router.post("/", async (req, res) => {
     let validBody = validShop(req.body);
