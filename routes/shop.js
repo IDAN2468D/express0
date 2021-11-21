@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 })
 
 
-router.post("/", async (req, res) => {
+router.post("/shop", async (req, res) => {
     let validBody = validShop(req.body);
     if (validBody.error) {
         return res.status(400).json(validBody.error.details);
