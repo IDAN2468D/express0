@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Joi = require("joi");
 
 const appliancesSchema = new mongoose.Schema({
+    title: String,
     name: String,
     model: String,
     image: String,
@@ -11,7 +12,10 @@ const appliancesSchema = new mongoose.Schema({
     DiscountPercentages: Number,
     Percentages: Number,
     CatalogNumber: Number,
-    imageDetails: Array
+    imageDetails: Array,
+    ColourShown: String,
+    Style: String,
+    Country: String
 })
 
 const AppliancesModel = mongoose.model("appliances", appliancesSchema);
