@@ -1,2 +1,1 @@
-
-web: node shop.js
+web: node app.js
