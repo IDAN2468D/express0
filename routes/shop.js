@@ -9,7 +9,7 @@ router.use(cors({
 }))
 
 
-router.get("/", async (req, res) => {
+router.get("/shop", async (req, res) => {
     let data = await ShopModel.find({});
     res.json(data);
 })
