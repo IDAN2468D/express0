@@ -10,8 +10,7 @@ router.use(cors({
 
 
 router.get("/", async (req, res) => {
-    let data = await FoodModel.find({});
-    res.json(data);
+    res.json({ msg: "kazam 11" });
 })
 
 router.post("/", async (req, res) => {
