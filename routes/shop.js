@@ -8,9 +8,10 @@ router.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
+
 router.get("/", async (req, res) => {
-    let data = await ShopModel.find({});
-    res.json(data);
+    let shop = new ShopModel(req.body);
+    res.json(shop);
 })
 
 
