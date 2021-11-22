@@ -10,7 +10,7 @@ router.use(cors({
 
 
 router.get("/", async (req, res) => {
-    let data = await FoodModel.find({});
+    let data = await FoodModel.find(req);
     res.json(data);
 })
 
