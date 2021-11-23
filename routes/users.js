@@ -3,7 +3,11 @@ const { UsersModel, validUser } = require("../models/usersModel")
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.json({ msg: "express work 3333" })
+    UsersModel.find()
+        .then((shop) => res.send(shop))
+        .catch((error) => {
+            res.status(500).send("Something went wrong");
+        })
 })
 
 router.post("/user", async (req, res) => {
