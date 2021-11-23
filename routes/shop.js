@@ -9,10 +9,13 @@ router.use(cors({
 }))
 
 
-router.get("/", async (req, res) => {
-    let shop = await ShopModel.find({});
-    res.json(shop);
-})
+router.get("/", (req, res) => {
+    ShopModel.find()
+        .then((shop) => res.send(shop))
+        .catch((error) => {
+            res.status(500).send("Something went wrong");
+        })
+});
 
 
 router.post("/", async (req, res) => {
