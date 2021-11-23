@@ -17,6 +17,17 @@ router.get("/", (req, res) => {
         })
 });
 
+router.get("/:shopId", (req, res) => {
+    ShopModel.findById(req.params.shopId)
+        .then((shops) => {
+            if (shops) res.send(shops);
+            res.status(404).send("Shop not found")
+        })
+        .catch((error) => {
+            res.status(500);
+        });
+})
+
 
 router.post("/", async (req, res) => {
     let validBody = validShop(req.body);
