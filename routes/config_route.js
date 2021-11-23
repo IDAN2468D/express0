@@ -12,7 +12,3 @@ exports.routesInit = (app) => {
     app.use("/foods", foodsR)
 
 }
-
-
-
-
