@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
     res.json({ msg: "express work 3333" })
 })
 
-router.post("/users", async (req, res) => {
+router.post("/user", async (req, res) => {
     let validBody = validUser(req.body);
     if (validBody.error) {
         return res.status(400).json(validBody.error.details);
