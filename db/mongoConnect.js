@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://idankzm:idankzm2468@cluster0.purdk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://idankzm:idankzm2468@cluster0.purdk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/express0',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
