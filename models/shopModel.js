@@ -11,6 +11,7 @@ const shopSchema = new mongoose.Schema({
     NutritionName: String,
     DiscountPercentages: Number,
     Percentages: Number,
+    StockNumber: Number,
     Nutrition: Array,
 })
 
